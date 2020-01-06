@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="updown.css"/>
+		<script type="text/javascript" src="../../js/jquery-2.1.4.min.js" ></script>
+		<script type="text/javascript" src="updown.js" ></script>
+		<style type="text/css">
+			*{
+				padding:0;
+				margin: 0;
+			}
+			body{
+				/*background-color: green;*/
+			}
+			#box{
+				background-color: red;
+				overflow: auto;
+				/*position: absolute;
+				top: 20px;
+				bottom: 20px;*/
+				/*left: 0;
+				right: 0;*/
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<p style="height: 30px; widows: 100%; margin-bottom: 10px; background-color: darkgray;">现成数据</p>
+			<p style="height: 30px; widows: 100%; margin-bottom: 10px; background-color: darkgray;">现成数据</p>
+			<p style="height: 30px; widows: 100%; margin-bottom: 10px; background-color: darkgray;">现成数据</p>
+			<p style="height: 30px; widows: 100%; margin-bottom: 10px; background-color: darkgray;">现成数据</p>
+			<p style="height: 30px; widows: 100%; margin-bottom: 10px; background-color: darkgray;">现成数据</p>
+			<p style="height: 30px; widows: 100%; margin-bottom: 10px; background-color: darkgray;">现成数据</p>
+			<p style="height: 30px; widows: 100%; margin-bottom: 10px; background-color: darkgray;">现成数据</p>
+			<p style="height: 30px; widows: 100%; margin-bottom: 10px; background-color: darkgray;">现成数据</p>
+			<p style="height: 30px; widows: 100%; margin-bottom: 10px; background-color: darkgray;">现成数据</p>
+			<!--<p style="height: 30px; widows: 100%; margin-bottom: 10px; background-color: darkgray;">'+i1+'</p>
+			<p style="height: 30px; widows: 100%; margin-bottom: 10px; background-color: darkgray;">'+i1+'</p>
+			<p style="height: 30px; widows: 100%; margin-bottom: 10px; background-color: darkgray;">'+i1+'</p>
+			<p style="height: 30px; widows: 100%; margin-bottom: 10px; background-color: darkgray;">'+i1+'</p>
+			<p style="height: 30px; widows: 100%; margin-bottom: 10px; background-color: darkgray;">'+i1+'</p>
+			<p style="height: 30px; widows: 100%; margin-bottom: 10px; background-color: darkgray;">'+i1+'</p>
+			<p style="height: 30px; widows: 100%; margin-bottom: 10px; background-color: darkgray;">'+i1+'</p>
+			<p style="height: 30px; widows: 100%; margin-bottom: 10px; background-color: darkgray;">'+i1+'</p>
+			<p style="height: 30px; widows: 100%; margin-bottom: 10px; background-color: darkgray;">'+i1+'</p>
+			<p style="height: 30px; widows: 100%; margin-bottom: 10px; background-color: darkgray;">'+i1+'</p>
+			<p style="height: 30px; widows: 100%; margin-bottom: 10px; background-color: darkgray;">'+i1+'</p>
+			<p style="height: 30px; widows: 100%; margin-bottom: 10px; background-color: darkgray;">'+i1+'</p>
+			<p style="height: 30px; widows: 100%; margin-bottom: 10px; background-color: darkgray;">'+i1+'</p>
+			<p style="height: 30px; widows: 100%; margin-bottom: 10px; background-color: darkgray;">'+i1+'</p>
+			<p style="height: 30px; widows: 100%; margin-bottom: 10px; background-color: darkgray;">'+i1+'</p>
+			<p style="height: 30px; widows: 100%; margin-bottom: 10px; background-color: darkgray;">'+i1+'</p>
+			<p style="height: 30px; widows: 100%; margin-bottom: 10px; background-color: darkgray;">'+i1+'</p>
+			<p style="height: 30px; widows: 100%; margin-bottom: 10px; background-color: darkgray;">'+i1+'</p>
+			<p style="height: 30px; widows: 100%; margin-bottom: 10px; background-color: darkgray;">'+i1+'</p>
+			<p style="height: 30px; widows: 100%; margin-bottom: 10px; background-color: darkgray;">'+i1+'</p>
+			<p style="height: 30px; widows: 100%; margin-bottom: 10px; background-color: darkgray;">'+i1+'</p>
+			<p style="height: 30px; widows: 100%; margin-bottom: 10px; background-color: darkgray;">'+i1+'</p>
+			<p style="height: 30px; widows: 100%; margin-bottom: 10px; background-color: darkgray;">'+i1+'</p>
+			<p style="height: 30px; widows: 100%; margin-bottom: 10px; background-color: darkgray;">'+i1+'</p>
+			<p style="height: 30px; widows: 100%; margin-bottom: 10px; background-color: darkgray;">'+i1+'</p>
+			<p style="height: 30px; widows: 100%; margin-bottom: 10px; background-color: darkgray;">'+i1+'</p>
+			<p style="height: 30px; widows: 100%; margin-bottom: 10px; background-color: darkgray;">'+i1+'</p>
+			<p style="height: 30px; widows: 100%; margin-bottom: 10px; background-color: darkgray;">'+i1+'</p>
+			<p style="height: 30px; widows: 100%; margin-bottom: 10px; background-color: darkgray;">'+i1+'</p>
+			<p style="height: 30px; widows: 100%; margin-bottom: 10px; background-color: darkgray;">'+i1+'</p>
+			<p style="height: 30px; widows: 100%; margin-bottom: 10px; background-color: darkgray;">'+i1+'</p>
+			<p style="height: 30px; widows: 100%; margin-bottom: 10px; background-color: darkgray;">'+i1+'</p>
+			<p style="height: 30px; widows: 100%; margin-bottom: 10px; background-color: darkgray;">'+i1+'</p>
+			<p style="height: 30px; widows: 100%; margin-bottom: 10px; background-color: darkgray;">'+i1+'</p>
+			<p style="height: 30px; widows: 100%; margin-bottom: 10px; background-color: darkgray;">'+i1+'</p>
+			<p style="height: 30px; widows: 100%; margin-bottom: 10px; background-color: darkgray;">'+i1+'</p>
+			<p style="height: 30px; widows: 100%; margin-bottom: 10px; background-color: darkgray;">'+i1+'</p>
+			<p style="height: 30px; widows: 100%; margin-bottom: 10px; background-color: darkgray;">'+i1+'</p>
+			<p style="height: 30px; widows: 100%; margin-bottom: 10px; background-color: darkgray;">'+i1+'</p>
+			<p style="height: 30px; widows: 100%; margin-bottom: 10px; background-color: darkgray;">'+i1+'</p>
+			<p style="height: 30px; widows: 100%; margin-bottom: 10px; background-color: darkgray;">'+i1+'</p>
+			<p style="height: 30px; widows: 100%; margin-bottom: 10px; background-color: darkgray;">'+i1+'</p>-->
+		</div>
+		<!--<div id="gys" style="position: fixed; z-index: 1000000000; top: 50%; left: 0; background-color: greenyellow;"></div>-->
+	</body>
+	<script type="text/javascript">
+		/*$("body").on("touchmove",function(event){
+			var t=$(this).scrollTop();
+			console.log("t:"+t);
+			if(t==0){
+				event.preventDefault();
+				console.log("阻止");
+				$(this).scrollTop(1);
+			}
+		});
+		*/
+		
+		var i1=0;
+		var i2=0;
+		$("#box").ui_reload({
+			left:20,
+			right:20,
+			top:100,
+			bottom:300,
+			down:function(callback){
+				console.log("down");
+				i1--;
+				setTimeout(function(){
+					$("#box").prepend('<p style="height: 30px; widows: 100%; margin-bottom: 10px; background-color: darkgray;">'+i1+'</p>');
+					callback();
+				},500);
+			},
+			up:function(callback){
+				console.log("up");
+				i2++;
+				setTimeout(function(){
+					$("#box").append('<p style="height: 30px; widows: 100%; margin-bottom: 10px; background-color: darkgray;">'+i2+'</p>');
+					callback();
+				},500);
+			}
+		});
+		
+	</script>
+</html>

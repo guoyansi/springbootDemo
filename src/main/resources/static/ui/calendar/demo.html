@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>日历控件</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+		</style>
+		<link rel="stylesheet" href="calendar.css" />
+		
+		<script type="text/javascript" src="../../js/jquery-2.1.4.min.js" ></script>
+	</head>
+	<body>
+		<input id="rl1" type="text" style="margin-left: 200px; margin-top: 50px;" placeholder="2015-05-06"/>
+		<input id="rl5" type="text" style="margin-left: 200px; margin-top: 50px;" placeholder="150506"/>
+		<input id="rl4" type="text" style="margin-left: 200px; margin-top: 50px;" placeholder="2015-5-6"/>
+		<input id="rl2" type="text" style="margin-left: 200px; margin-top: 50px;" placeholder="2015/05/06" />
+		<input id="rl3" type="text" style="margin-left: 200px; margin-top: 50px;"  placeholder="2015年05月06" />
+		<!--<div class="ui-calendar-box">
+			<span class="ui-calendar-jiao"></span>
+			<div class="ui-calendar-y-select" style="left: 40px;">
+				<span class="ui-calendar-select-option" value="2015">2015</span>
+				<span class="ui-calendar-select-option" value="2015">2015</span>
+				<span class="ui-calendar-select-option" value="2015">2015</span>
+				<span class="ui-calendar-select-option" value="2015">2015</span>
+				<span class="ui-calendar-select-option" value="2015">2015</span>
+				<span class="ui-calendar-select-option" value="2015">2015</span>
+				<span class="ui-calendar-select-option" value="2015">2015</span>
+				<span class="ui-calendar-select-option" value="2015">2015</span>
+				<span class="ui-calendar-select-option" value="2015">2015</span>
+				<span class="ui-calendar-select-option" value="2015">2015</span>
+				<span class="ui-calendar-select-option" value="2015">2015</span>
+				<span class="ui-calendar-select-option" value="2015">2015</span>
+				<span class="ui-calendar-select-option" value="2015">2015</span>
+				<span class="ui-calendar-select-option" value="2015">2015</span>
+				<span class="ui-calendar-select-option" value="2015">2015</span>
+				<span class="ui-calendar-select-option" value="2015">2015</span>
+				<span class="ui-calendar-select-option" value="2015">2015</span>
+				<span class="ui-calendar-select-option" value="2015">2015</span>
+				<span class="ui-calendar-select-option" value="2015">2015</span>
+				<span class="ui-calendar-select-option" value="2015">2015</span>
+				<span class="ui-calendar-select-option" value="2015">2015</span>
+				<span class="ui-calendar-select-option" value="2015">2015</span>
+				<span class="ui-calendar-select-option" value="2015">2015</span>
+				<span class="ui-calendar-select-option" value="2015">2015</span>
+			</div>
+			<div class="ui-calendar-m-select" style="left: 120px;">
+				<span class="ui-calendar-select-option" value="1">1</span>
+				<span class="ui-calendar-select-option" value="2">2</span>
+				<span class="ui-calendar-select-option" value="3">3</span>
+				<span class="ui-calendar-select-option" value="4">4</span>
+				<span class="ui-calendar-select-option" value="5">5</span>
+				<span class="ui-calendar-select-option" value="6">6</span>
+				<span class="ui-calendar-select-option" value="7">7</span>
+				<span class="ui-calendar-select-option" value="8">8</span>
+				<span class="ui-calendar-select-option" value="9">9</span>
+				<span class="ui-calendar-select-option" value="10">10</span>
+				<span class="ui-calendar-select-option" value="11">11</span>
+				<span class="ui-calendar-select-option" value="12">12</span>
+			</div>
+			<div class="ui-calendar-ym-box">
+				<span class="ui-calendar-y">2016</span>
+				<span class="ui-calendar-select-dowm"></span>
+				<span class="ui-calendar-ym-text">年</span>
+				<span class="ui-calendar-m">6</span>
+				<span class="ui-calendar-select-dowm"></span>
+				<span class="ui-calendar-ym-text">月</span>
+			</div>
+			<div class="ui-calendar-week-box">
+					<span class="ui-calendar-week">日</span>
+					<span class="ui-calendar-week">一</span>
+					<span class="ui-calendar-week">二</span>
+					<span class="ui-calendar-week">三</span>
+					<span class="ui-calendar-week">四</span>
+					<span class="ui-calendar-week">五</span>
+					<span class="ui-calendar-week">六</span>
+			</div>
+			<div class="ui-calendar-date-box">
+				<span class="ui-calendar-day ui-calendar-day-gray">13</span>
+				<span class="ui-calendar-day ui-calendar-day-gray">13</span>
+				<span class="ui-calendar-day ui-calendar-day-gray">13</span>
+				<span class="ui-calendar-day ui-calendar-day-blue">13</span>
+				<span class="ui-calendar-day ui-calendar-day-blue">13</span>
+				<span class="ui-calendar-day ui-calendar-day-blue">13</span>
+				<span class="ui-calendar-day ui-calendar-day-blue">13</span>
+				<span class="ui-calendar-day ui-calendar-day-blue">13</span>
+				<span class="ui-calendar-day ui-calendar-day-blue">13</span>
+				<span class="ui-calendar-day ui-calendar-day-blue">13</span>
+				<span class="ui-calendar-day ui-calendar-day-blue">13</span>
+				<span class="ui-calendar-day ui-calendar-day-blue">13</span>
+				<span class="ui-calendar-day ui-calendar-day-blue">13</span>
+				<span class="ui-calendar-day ui-calendar-day-blue">13</span>
+				<span class="ui-calendar-day ui-calendar-day-blue">13</span>
+				<span class="ui-calendar-day ui-calendar-day-blue ui-calendar-day-current">13</span>
+				<span class="ui-calendar-day ui-calendar-day-blue">13</span>
+				<span class="ui-calendar-day ui-calendar-day-blue">13</span>
+				<span class="ui-calendar-day ui-calendar-day-blue">13</span>
+				<span class="ui-calendar-day ui-calendar-day-blue">13</span>
+				<span class="ui-calendar-day ui-calendar-day-blue">13</span>
+				<span class="ui-calendar-day ui-calendar-day-blue">13</span>
+				<span class="ui-calendar-day ui-calendar-day-blue">13</span>
+				<span class="ui-calendar-day ui-calendar-day-blue">13</span>
+				<span class="ui-calendar-day ui-calendar-day-blue">13</span>
+				<span class="ui-calendar-day ui-calendar-day-blue">13</span>
+				<span class="ui-calendar-day ui-calendar-day-blue">13</span>
+				<span class="ui-calendar-day ui-calendar-day-blue">13</span>
+				<span class="ui-calendar-day ui-calendar-day-blue">13</span>
+				<span class="ui-calendar-day ui-calendar-day-blue">13</span>
+				<span class="ui-calendar-day ui-calendar-day-blue">13</span>
+				<span class="ui-calendar-day ui-calendar-day-blue">13</span>
+				<span class="ui-calendar-day ui-calendar-day-blue">13</span>
+				<span class="ui-calendar-day ui-calendar-day-blue">13</span>
+				<span class="ui-calendar-day ui-calendar-day-blue">13</span>
+			</div>
+		</div>-->
+	</body>
+	<script type="text/javascript" src="calendar.js" ></script>
+	<style type="text/css">
+	.rl1{
+		color: red;
+	}
+	.rl2{
+		color: darkgoldenrod;
+	}
+	.rl3{
+		color: darkgreen;
+	}		
+	</style>
+	<script type="text/javascript">
+		$("#rl1").ui_calendar({
+			format:1,
+			inputClass:"rl1",
+			defindDate:function(date){//自定义时间格式
+				return date;
+			}
+		});
+		$("#rl5").ui_calendar({
+			format:5,
+			defindDate:function(date){//自定义时间格式
+				return date;//.substr(2);
+			}
+		});
+		$("#rl4").ui_calendar({
+			format:4,
+			inputClass:"rl1"
+		});
+		$("#rl2").ui_calendar({
+			format:2,
+			inputClass:"rl2"
+		});
+		$("#rl3").ui_calendar({
+			format:3,
+			inputClass:"rl3"
+		});
+	</script>
+</html>

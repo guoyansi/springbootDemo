@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<ul id="slide" style="width: 50%;height: 200px;border: 1px solid;">
+			<li style="background-color: red;width: 100%;height: 20px;"></li>
+			<li style="background-color: white;width: 100%;height: 20px;"></li>
+			<li style="background-color: red;width: 100%;height: 20px;"></li>
+		</ul>
+	</body>
+	<script type="text/javascript" src="../../js/jquery-2.1.4.js"></script>
+	<script type="text/javascript" src="slide.js"></script>
+	<script type="text/javascript">
+		$("#slide").ui_slide({
+			isFullBox:false,//不满一屏幕，是否滚动
+            dir: "up", //none:不动,up:上,right:右,down:下,left:左
+            delay: 30,//执行时间
+		});
+	</script>
+</html>

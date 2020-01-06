@@ -1,0 +1,129 @@
+.ui-calendar-box{
+	position: absolute;
+	border: 1px solid #478de4;
+	/*width:220px;
+	height: 210px;*/
+	padding: 16px;
+	font-family: "宋体";
+	font-size: 16px;
+	left: 300px;
+	background-color: white;
+	z-index: 100000;
+}
+.ui-calendar-jiao{
+	position: absolute;
+	top: -10px;
+	left: 55%;
+	background-image: url(ui-calendar-jiao.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 15px;
+	height: 10px;
+	display: block;
+}
+.ui-calendar-ym-box{
+	color: #333333;
+	text-align: center;
+}
+.ui-calendar-y,
+.ui-calendar-select-dowm,
+.ui-calendar-ym-text,
+.ui-calendar-m,
+.ui-calendar-ym-text{
+	display: inline-block;
+}
+.ui-calendar-y,
+.ui-calendar-ym-text,
+.ui-calendar-m,
+.ui-calendar-ym-text{
+	padding: 0 8px;
+}
+.ui-calendar-select-dowm{
+	background-image: url(ui-calendar-selectdown.png);
+	background-repeat: no-repeat;
+	background-position: left top;
+	width: 12px;
+	height: 12px;
+	cursor: pointer;
+}
+.ui-calendar-y-select,
+.ui-calendar-m-select{
+	bottom: 20px;
+	overflow-y: auto;
+	position: absolute;
+	top: 20px;
+	/*width: 60px;*/
+	width: 57px;
+	background-color: white;
+	box-shadow: 0 0 3px rgba(0,0,0,.8);
+	cursor: pointer;
+	display: none;
+}
+.ui-calendar-select-option-m,
+.ui-calendar-select-option-y{
+	text-align: center;
+	line-height: 26px;
+	display: block;
+	width: 40px;
+}
+.ui-calendar-select-option-y:hover,
+.ui-calendar-select-option-m:hover,
+.ui-calendar-select-current{
+	background-color: #478de4;
+	color: white;
+}
+.ui-calendar-select-dowm:hover{
+	background-position: left -16px;
+}
+.ui-calendar-date-box,
+.ui-calendar-week-box{
+	overflow: hidden;
+	width: 203px;
+}
+.ui-calendar-day,
+.ui-calendar-week{
+	width: 23px;
+	height: 23px;
+	display: block;
+	float: left;
+	text-align: center;
+	line-height: 23px;
+	margin: 3px;
+}
+.ui-calendar-day{
+	cursor: pointer;
+}
+.ui-calendar-week{
+	color: #333333;
+}
+
+.ui-calendar-day-gray{
+	color:#999999;
+}
+.ui-calendar-day-blue{
+	color:#478de4;
+}
+.ui-calendar-day-current,
+.ui-calendar-day:hover{
+	background-color: #478de4;
+	color: white;
+}
+
+
+.ui-calendar-input{
+	border: 1px solid #c6ccd7;
+	width: 170px;
+	padding:0 15px;
+	height: 30px;
+	line-height: 30px;
+	color: #525e7b;
+	box-sizing: border-box;
+	border-radius: 3px;
+	/*float: left;*/
+}
+.ui-calendar-input-icon{
+	background-image: url(ui-calendar-input-icon.png);
+	background-repeat: no-repeat;
+	background-position: right center;
+	padding-right: 30px;
+}

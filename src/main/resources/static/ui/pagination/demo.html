@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="pagination.css" />
+		<script type="text/javascript" src="../../js/jquery-2.1.4.min.js" ></script>
+	</head>
+	<body>
+		<div id="child">
+			<div><span></span></div>
+		</div>
+		
+		<div id="a"></div>
+	</body>
+	<script type="text/javascript" src="pagination.js" ></script>
+	<script>
+			function getData(page,size){
+				//获取数据
+				
+				$("#a").ui_pn({
+					count:99397, //总数
+					size:size, //每页展示条数
+					//sizes:[10,200,300],
+					pos:"c",//位置
+					page:page,	//当前页
+					clickEvent:function(page,size){
+						/**
+						 * 这里是发生事件之后的回调函数
+						 * page是发生事件后的页码
+						 */
+						//alert(page);
+						getData(page,size);
+					}
+				});
+			}
+			getData(1,10);
+	</script>
+</html>

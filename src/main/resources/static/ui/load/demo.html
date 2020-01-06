@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+		<link rel="stylesheet" href="load.css" />
+		<script type="text/javascript" src="../../js/jquery-2.1.4.min.js" ></script>
+		<script type="text/javascript" src="load.js" ></script>
+	</head>
+	<body>
+		<div style="width: 300%;height: 100px;position: fixed;top: 0;z-index: 10001;">
+			<input onclick="gys1()" type="button" value="ajax加载,css3动画(默认)" />
+			<input onclick="gys2()" type="button" value="ajax加载,带加载效果gif" />
+			<input onclick="gys3()" type="button" value="ajax加载,纯文字效果" />
+			<input onclick="updateMsg()" type="button" value="修改标语" />
+			<input onclick="gyss()" type="button" value="ajaxclose" />
+		</div>
+		<div style="height:10000px"></div>
+			<script type="text/javascript">
+			var loader=null;
+			function gys1() {
+				loader=$.ui_load({
+					icon:1,
+					msg:"加载中..."
+				});
+			}
+			function gys2() {
+				loader=$.ui_load({
+					icon:2,
+					msg:"加载中..."
+				});
+			}
+			function gys3() {
+				loader=$.ui_load("加载中...");
+			}
+			function gyss() {
+				$.ui_load_close();
+			}
+			var i=0;
+			function updateMsg(){
+				i+=10;
+				$.ui_load_setText("加载中"+i+"%...",loader);
+			}
+		</script>
+	</body>
+</html>

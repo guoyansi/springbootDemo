@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="../../js/lib/jquery-2.24.js"></script>
+		<script type="text/javascript" src="enter.js"></script>
+	</head>
+	<body>
+		<input id="testEnter1" type="text"  placeholder="测试Enter事件"/>
+		<input id="testEnter2" type="text"  placeholder="测试Enter事件"/>
+	</body>
+	<script type="text/javascript">
+	$("#testEnter1").ui_enter(function(){
+		console.log("您输入了enter...");
+	});	
+	$("#testEnter2").ui_enter({
+			fn:function(){
+				console.log("您输入了enter...")
+			}
+		});
+	</script>
+</html>

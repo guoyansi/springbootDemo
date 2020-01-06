@@ -1,9 +1,6 @@
 package com.gys.item.ex;
 
-/**
- * 刷新页面时的自定义抛出异常
- */
-public class MyViewException extends RuntimeException{
+public class MyViewException extends RuntimeException {
 
     private String href;
     public MyViewException() {
@@ -12,7 +9,7 @@ public class MyViewException extends RuntimeException{
     public MyViewException(String message) {
         super(message);
     }
-    public MyViewException(String message,String href) {
+    public MyViewException(String message, String href) {
         super(message);
         this.href=href;
     }

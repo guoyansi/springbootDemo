@@ -1,0 +1,20 @@
+.ui-inputslide-pos-box {
+	background-color: white;
+	position: absolute;
+	border: 1px solid #ccc;
+	box-shadow: 0 0 5px #152B45;
+	max-height: 300px;
+	overflow: auto;
+	width: 150px;
+	display: none;
+}
+
+.ui-inputslide-pos-box-item {
+	padding: 3px;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.ui-inputslide-pos-box-item:hover {
+	background-color: cornflowerblue;
+}

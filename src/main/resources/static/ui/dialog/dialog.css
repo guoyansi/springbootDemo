@@ -1,0 +1,114 @@
+/* 
+弹出框样式
+ */
+
+.ui-dialog-shade {
+	width: 100%;
+	position: fixed;
+	z-index: 1500;
+	background-color: #000;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	opacity: 0;
+}
+.ui-dialog {
+	position:fixed;
+	top: 50%;
+	left: 50%; 
+	overflow: hidden;
+	background-color: white;
+	display: none;
+	border-radius: 5px;
+}
+.ui-dialog.ui-dialog-center{
+	transform: translate(-50%,-50%);
+	-ms-transform:translate(-50%,-50%);	/* IE 9 */
+	-moz-transform:translate(-50%,-50%);	/* Firefox */
+	-webkit-transform:translate(-50%,-50%);/* Safari 和 Chrome */
+	-o-transform:translate(-50%,-50%); 	/* Opera */
+}
+.ui-dialog .ui-dialog-header {
+	height: 25px;
+	padding:12px 23px;
+	background-color: #1b2a3c;
+}
+.ui-dialog .ui-dialog-title {
+	float: left;
+	font-size: 16px;
+	color: white;
+	background-size: 20px;
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+.ui-dialog .ui-dialog-close {
+	color: #ff6e6e;
+	float: right;
+	text-shadow: 0 1px 0 #fff;
+	text-decoration: none;
+	background-image: url(ui-dialog-close-icon.png);
+	background-repeat: no-repeat;
+	width: 20px;
+	height: 20px;
+	background-position: center;
+	background-size: 16px 16px;
+}
+.ui-dialog .ui-dialog-close:hover {
+	opacity: 0.8;
+}
+.ui-dialog .ui-dialog-body {
+	position: relative;
+}
+.ui-dialog-edit-scroll{
+	overflow: auto;
+}
+.ui-dialog[type="edit"] .ui-dialog-body{
+	padding:10px;
+}
+.ui-dialog .ui-dialog-footer {
+	padding: 0 20px 20px;
+	text-align: center;
+	height: 35px;
+}
+.ui-dialog .ui-dialog-footer .ui-input-button {
+	margin-left: 15px;
+	border:none;
+	font-size: 15px;
+	color: white;
+	padding:5px 14px;
+	cursor:pointer;
+	font-family: "宋体";
+}
+.ui-dialog .ui-dialog-footer .ui-input-blue-button{
+	background-color: #478de4;
+}
+.ui-dialog-footer .ui-input-yellow-button{
+	background-color: #f4b36e;
+}
+.ui-dialog .ui-dialog-footer .ui-input-gray-button{
+	background-color: #e5e5e5;
+	color: #555a5d;
+}
+.ui-dialog .ui-dialog-success,
+.ui-dialog .ui-dialog-warning,
+.ui-dialog .ui-dialog-error,
+.ui-dialog .ui-dialog-default{
+	font-size: 16px;
+	font-family: "宋体";
+	text-align: center;
+	line-height: 22px;
+	padding:20px 30px;
+}
+.ui-dialog .ui-dialog-success {
+	color: #0fb806;
+}
+.ui-dialog .ui-dialog-warning {
+	color: #ae7404;
+}
+.ui-dialog .ui-dialog-error {
+	color: #f9424f;
+}
+.ui-dialog-text{
+	display:inline-block;
+	text-align:left;
+}

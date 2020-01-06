@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+		<link rel="stylesheet" href="dialog.css" />
+		<style>
+			#testFocus:focus{
+				border:1px solid red;
+			}
+		</style>
+		<script type="text/javascript" src="../../js/jquery-2.1.4.min.js" ></script>
+	</head>
+	<body>
+		<!--<div style="height: 500px;"></div>-->
+		<div style="position: absolute; z-index: 1000000000;">
+			<input type="button" value="默认弹框" onclick="defaultBtn()" />
+			<input id="success-btn" type="button" value="弹出成功提示框" onclick="successDialog()" />
+			<input type="button" value="弹出失败提示框" onclick="errorDialog()" />
+			<input type="button" value="弹出警告提示框" onclick="waringDialog()" />
+			<input type="button" value="弹出编辑提示框" onclick="editDialog()" >
+			<input type="button" value="弹出100%编辑提示框" onclick="editDialog001()" >
+			<input type="button" value="不带尺寸的弹出框,自适应" onclick="noSizeDialog()" >
+		</div>
+		
+		<div class="guoyansi" width=500 max-height=400 style="display: none;"><!--height=400-->
+			 <p style="height: 200px; width: 100%; background-color: #3071A9;">855</p>
+			 <p style="height: 200px; width: 100%; background-color: red;">855</p>
+			 <p style="height: 200px; width: 100%; background-color: #3071A9;">855</p>
+			 <p style="height: 200px; width: 100%; background-color: blue;">855</p>
+			 <p style="height: 200px; width: 100%; background-color: #3071A9;">855</p>
+			 <p style="height: 200px; width: 100%; background-color: yellow;">855</p>
+			 <p style="height: 200px; width: 100%; background-color: #3071A9;">858988</p>
+		 </div>
+		 
+		 <!--百分百宽度-->
+		 <div class="guoyansiW001" width="100%" height="100%" style="display: none;"><!--height=400-->
+			 <p style="height: 200px; width: 100%; background-color: #3071A9;">855</p>
+			 <p style="height: 200px; width: 100%; background-color: red;">855</p>
+			 <p style="height: 200px; width: 100%; background-color: #3071A9;">855</p>
+			 <p style="height: 200px; width: 100%; background-color: blue;">855</p>
+			 <p style="height: 200px; width: 100%; background-color: #3071A9;">855</p>
+			 <p style="height: 200px; width: 100%; background-color: yellow;">855</p>
+			 <p style="height: 200px; width: 100%; background-color: #3071A9;">858988</p>
+		 </div>
+		 <div style="height: 500px;"></div>
+	</body>
+	<script type="text/javascript" src="dialog.js"></script>
+	<script type="text/javascript">
+		//自动获取焦点的按钮  点空格键 会触发弹框
+		$("#success-btn").focus();
+		function successDialog(){
+			$.ui_dialog({
+				title:"标题",
+				type:"s",
+				con:"成功提示类容",
+				//width:300,
+				//height:50,
+				btn:[
+					{name:"确定",action:function(){alert("ok!!")}}
+				]
+			});
+		}
+		function noSizeDialog(){
+			$.ui_dialog({
+				title:"标题",
+				type:"d",
+				closeBtn:true,
+				con:"不带尺寸的弹出框,自适应,不带尺寸的弹出框,自适应,不带尺寸的弹出框,自适应,不带尺寸的弹出框,自适应",
+				btn:[
+					{name:"确定",action:function(){alert("ok!!")}}
+				]
+			});
+		}
+		function errorDialog () {
+			$.ui_dialog({
+				title:"标题",
+				type:"e",
+				con:"操作失败!!!!",
+				width:300,
+				//height:50,
+				btn:[
+					{name:"确定",action:function(){alert("ok!!")}},
+					{name:"取消",action:function(){$.ui_dialogClose();}}
+				]
+			});
+		}
+		function waringDialog(){
+			$.ui_dialog({
+				title:"标题",
+				type:"w",
+				con:"操作警告!!!!",
+				width:300,
+				//height:50,
+				btn:[
+					{name:"确定",action:function(){alert(p.id);}},
+					{name:"取消",action:function(){$.ui_dialogClose();}}
+				]
+			});
+		}
+		function editDialog(){
+			$(".guoyansi").ui_dialog({
+				 title:"标题",
+				 draggle:true,//是否允许头部拖拽				 
+				 btn:[
+					 {name:"确定",action:function(){}},
+					 {name:"返回",action:function(){},btnClass:"ui-input-yellow-button"},
+					 {name:"取消",action:function(){$.ui_dialogClose("a")}}
+				 	]
+				 });
+		}
+		
+		function editDialog001(){
+			$(".guoyansiW001").ui_dialog({
+				 title:"标题",
+				 draggle:true,//是否允许头部拖拽				 
+				 btn:[
+					 {name:"确定",action:function(){}},
+					 {name:"返回",action:function(){},btnClass:"ui-input-yellow-button"},
+					 {name:"取消",action:function(){$.ui_dialogClose("a")}}
+				 	]
+				 });
+		}
+function defaultBtn(){
+	$.ui_dialog({
+		title:"标题",
+		type:"default",
+		con:"默认内容默认内容默认内容默认内容默认内容默认内容默认内容默认内容默认内容默认内容",
+		/*width:300,*/
+		closeBtn:false,//关闭按钮
+		client:2,//1是电脑端,2是移动端,
+		height:50,
+		btn:[
+			{name:"确定",action:function(){alert("ok!!")}},
+			{name:"取消",action:function(){$.ui_dialogClose("s");}}
+		]
+	});
+}
+		
+	</script>
+</html>

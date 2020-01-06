@@ -1,7 +1,5 @@
 package com.gys.item.interceptor;
 
-import com.gys.item.ex.MyException;
-import com.gys.item.ex.MyNoSessionException;
 import com.gys.item.ex.MyViewException;
 import com.gys.item.ex.MyViewNoSessionException;
 import com.gys.item.util.HttpResult;

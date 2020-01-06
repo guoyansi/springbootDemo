@@ -1,0 +1,45 @@
+.ui-table-column-hidebtn {
+	border: 0;
+	font-size: 14px;
+	padding: 1px 5px;
+	background-color: #b4b2b2;
+	cursor: pointer;
+	color: white;
+	border-radius: 2px;
+	position: absolute;
+	right: 3px;
+	top: 3px;
+}
+
+.ui-table-column-hidebtn:hover {
+	color: #eee;
+}
+
+.ui-table-column-switch {
+	position: relative;
+}
+
+.ui-table-column-switch .ui-table-column-hidebtn {
+	display: none;
+}
+
+.ui-table-column-switch:hover .ui-table-column-hidebtn {
+	display: block;
+}
+
+.ui-table-column-showbtn {
+	color: white;
+	float: right;
+	border-radius: 5px;
+	background-color: #b4b2b2;
+	border: 1px solid #9b9999;
+	padding: 0px 15px;
+	line-height: 20px;
+	font-size: 12px;
+	margin-right: 5px;
+	cursor: pointer;
+}
+
+.ui-table-column-showbtn:hover {
+	color: #eee;
+}

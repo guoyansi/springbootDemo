@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			.ui-select-slide-box {
+				width: 200px;
+			}
+		</style>
+		<link rel="stylesheet" href="select.css" />
+		<!--<script type="text/javascript" src="../../js/jquery-2.1.4.js"></script>-->
+		<script type="text/javascript" src="../../js/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="select.js"></script>
+	</head>
+
+	<body>
+		<input id="test1" class="test2" type="text" style="margin-left: 20px;" />
+		<input id="test2" class="test2" type="text" style="margin-left: 20px;height: 40px;" />
+		<button onclick="getRes()" style="margin-left: 50px;">获取value</button>
+		<button onclick="repeatUi()">重复执行</button>
+		<select id="select">
+			<option value="165" checked="checked">国际测试</option>
+			<option value="164" checked="checked">gysRole(勿删)</option>
+			<option value="143" checked="checked">首页（必选）</option>
+			<option value="142" checked="checked">测试专用</option>
+			<option value="141" checked="checked">资费审批（仅有审批账号加）</option>
+			<option value="140" checked="checked">经营分析（省及以下）</option>
+			<option value="139" checked="checked">经营分析（总部）</option>
+			<option value="137" checked="checked">管理员专用</option>
+			<option value="136" checked="checked">异常监控（仅无收寄）</option>
+			<option value="135" checked="checked">异常监控（除无收寄）</option>
+		</select>
+	</body>
+
+</html>
+<script type="text/javascript">
+	$("#test1").ui_select();
+	$("#test2").ui_select({
+		all: true,
+		search: false,
+		zIndex: 102,
+		list: [{
+				value: 5,
+				txt: "测试56",
+				checked: true
+			},
+			{
+				value: 6,
+				txt: "测试6",
+				checked: true
+			},
+			{
+				value: 7,
+				txt: "测试71"
+			},
+			{
+				value: 8,
+				txt: "测试82"
+			},
+			{
+				value: 9,
+				txt: "测试56"
+			},
+			{
+				value: 10,
+				txt: "测试6"
+			},
+			{
+				value: 11,
+				txt: "测试71"
+			},
+			{
+				value: 13,
+				txt: "测试82"
+			},
+			{
+				value: 14,
+				txt: "测试56"
+			},
+			{
+				value: 15,
+				txt: "测试6"
+			},
+			{
+				value: 16,
+				txt: "测试71"
+			},
+			{
+				value: 17,
+				txt: "测试82"
+			},
+			{
+				value: 18,
+				txt: "测试56"
+			},
+			{
+				value: 19,
+				txt: "测试6"
+			},
+			{
+				value: 20,
+				txt: "测试701"
+			},
+			{
+				value: 21,
+				txt: "测试82"
+			}
+		]
+	});
+
+	$("#select").ui_select({
+		all: true,
+		zIndex: 50000
+	});
+
+	function repeatUi() {
+		$("#test1").ui_select();
+	}
+
+	function getRes() {
+		console.log($("#test2").ui_get_select("value"));
+		console.log($("#test2").ui_get_select("txt"));
+		console.log($("#test2").ui_get_select());
+	}
+</script>

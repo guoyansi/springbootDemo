@@ -1,0 +1,48 @@
+.login-bj{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background-image: url(../img/loginbj.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.login-logo{
+	font-size: 25px;
+	color: white;
+	padding-top: 50px;
+	padding-left: 50px;
+}
+.login-box{
+	padding: 20px 0 30px;
+	background-color: white;
+	width: 300px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	padding-bottom: 35px;
+	-webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+.login-title{
+	color: #1e44e3;
+	font-size: 16px;
+	font-weight: bold;
+	padding: 20px 0 10px 0;
+	width: 210px;
+	margin: 0 auto;
+}
+.login-form-input-text{
+	width: 210px;
+}
+.login-form-row{
+	text-align: center;
+	padding:10px 0;
+}
+.login-btn{
+	width: 210px;
+	height: 35px;
+}

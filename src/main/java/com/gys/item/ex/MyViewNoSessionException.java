@@ -1,10 +1,10 @@
 package com.gys.item.ex;
 
+public class MyViewNoSessionException extends RuntimeException {
 
-/**
- * 刷新页面时的session失效异常
- */
-public class MyViewNoSessionException extends RuntimeException{
+    private String href;
+
+
 
     public MyViewNoSessionException() {
         super();
@@ -12,5 +12,18 @@ public class MyViewNoSessionException extends RuntimeException{
 
     public MyViewNoSessionException(String message) {
         super(message);
+    }
+
+    public MyViewNoSessionException(String message, String href) {
+        super(message);
+        this.href=href;
+    }
+
+    public String getHref() {
+        return href;
+    }
+
+    public void setHref(String href) {
+        this.href = href;
     }
 }

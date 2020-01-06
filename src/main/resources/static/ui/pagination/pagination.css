@@ -1,0 +1,125 @@
+/*分页*/
+.ui-pagination-box{
+	position: relative;
+	clear: both;
+	height: 25px;
+	padding:20px 0;
+}
+.ui-pagination-position-left{
+	float: left;
+}
+.ui-pagination-position-right{
+	float: right;
+}
+.ui-pagination-position-center{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.ui-pagination {
+	clear: both;
+	overflow: hidden;
+}
+.ui-pagination .ui-pagination-text{
+	float: left;
+	font-size: 12px;
+	display: block;
+	height: 16px;
+	line-height: 26px;
+	padding: 3px 0;
+}
+.ui-pagination .ui-pagination-Num,
+.ui-pagination .ui-pagination-FirstPage,
+.ui-pagination .ui-pagination-PrevPage,
+.ui-pagination .ui-pagination-NextPage,
+.ui-pagination .ui-pagination-LastPage,
+.ui-pagination .ui-pagination-Hidden {
+	border: 1px solid #ccc;
+	margin-left: 5px;
+	float: left;
+	display: block;
+	overflow: hidden;
+	padding: 3px;
+	font-family: 微软雅黑;
+	font-size: 12px;
+	min-width: 15px;
+	text-align: center;
+	height: 16px;
+	line-height: 16px;
+	cursor: pointer;
+}
+.ui-pagination .ui-pagination-Num,
+.ui-pagination .ui-pagination-FirstPage,
+.ui-pagination .ui-pagination-PrevPage,
+.ui-pagination .ui-pagination-NextPage,
+.ui-pagination .ui-pagination-LastPage{
+	background-color: white;
+}
+
+.ui-pagination .ui-pagination-FirstPage{
+	margin-left: 0;	
+}
+
+
+.ui-pagination .ui-pagination-Current {
+	background-color: #278DE1;
+	color: white;
+}
+.ui-pagination .ui-pagination-Num:hover,
+.ui-pagination .ui-pagination-FirstPage:hover,
+.ui-pagination .ui-pagination-PrevPage:hover,
+.ui-pagination .ui-pagination-NextPage:hover,
+.ui-pagination .ui-pagination-LastPage:hover{
+	background-color: #90c8f6;
+	color: white;
+}
+.ui-pagination .ui-pagination-Hidden {
+	border: none;
+	cursor: default;
+}
+
+.ui-pagination .ui-pagination-Hidden:hover {
+	background-color: transparent;
+}
+
+.ui-pagination input.ui-jumpNum {
+	width: 30px;
+	border: 1px solid #8c8c8c;
+	float: left;
+	width: 28px;
+	height: 16px;
+	margin-left: 5px;
+	line-height: 20px;
+	padding: 3px;
+	text-align: center;
+	float: left;
+	box-sizing:content-box;
+}
+
+.ui-pagination .ui-jumpText {
+	border: none;
+	background: none;
+	float: left;
+	outline: none;
+	margin-left: 3px;
+	text-decoration: none;
+	color: #333;
+	font-size: 12px;
+	height: 16px;
+	line-height: 16px;
+	padding: 3px;
+	display: block;
+}
+
+.ui-pagination a.ui-jumpText:hover {
+	color: #960;
+}
+
+.ui-pagination .ui-pageSizes{
+	width: 56px;
+	height: 24px;
+	float: left;
+	box-sizing: border-box;
+	margin-right: 5px;
+	border:1px solid #8c8c8c;
+}
