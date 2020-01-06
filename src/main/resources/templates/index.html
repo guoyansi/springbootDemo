@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <title>测事页</title>
+    <th:block th:replace="common::static" />
+</head>
+<body>
+<div th:replace="common::top"></div>
+<div th:replace="common::menu"></div>
+<div class="ui-page">
+    <div class="ui-nav">
+        <span class="ui-nav-history ui-nav-font-blue ui-nav-line">首页</span>
+        <span class="ui-nav-split">&gt;</span>
+        <span class="ui-nav-current">项目</span>
+    </div>
+    <div class="ui-table-box">
+        <table class="ui-table">
+            <caption class="ui-table-caption">搜索结果</caption>
+            <thead class="ui-table-thead">
+            <tr class="ui-table-center">
+                <td class="ui-table-td">序号</td>
+                <td class="ui-table-td">项目名称</td>
+                <td class="ui-table-td">创建时间</td>
+                <td class="ui-table-td">管理</td>
+            </tr>
+            </thead>
+            <tbody class="ui-table-tbody">
+                <tr th:each="p,status:${list}" class="ui-table-tr ui-table-center">
+                    <td class="ui-table-td" th:text="${status.count}"></td>
+                    <td class="ui-table-td" th:text="${p.project_name}"></td>
+                    <td class="ui-table-td" th:text="${p.create_time}"></td>
+                    <td class="ui-table-td">
+                        <input th:attr="project_id=${p.project_id}" class="js-adduser-btn ui-btn ui-btn-blue" role="1" type="button" value="测试" />
+                        <input th:attr="project_id=${p.project_id}" class="js-adduser-btn ui-btn ui-btn-yellow" role="2" type="button" value="开发" />
+                        <input th:attr="project_id=${p.project_id}" class="js-delete-btn ui-btn ui-btn-red" type="button" value="删除" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+
+</body>
+<script type="text/javascript" th:inline="javascript">
+
+</script>
+</html>

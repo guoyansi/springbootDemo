@@ -1,0 +1,45 @@
+<div xmlns:th="http://www.thymeleaf.org">
+
+	<th:block th:fragment="static">
+		<link rel="stylesheet" type="text/css" th:href="@{/static/lazy/6/css/base.css}"/>
+		<link rel="stylesheet" type="text/css" th:href="@{/static/lazy/6/css/lazy.css}"/>
+		<link rel="stylesheet" type="text/css" th:href="@{/static/ui/dialog/dialog.css}"/>
+		<link rel="stylesheet" type="text/css" th:href="@{/static/ui/pagination/pagination.css}"/>
+		<link rel="stylesheet" type="text/css" th:href="@{/static/ui/load/load.css}"/>
+		<link rel="stylesheet" type="text/css" th:href="@{/static/css/testsys.css}"/>
+		<script type="text/javascript" th:src="@{/static/js/jquery-2.1.4.min.js}"></script>
+		<script type="text/javascript" th:src="@{/static/ui/dialog/dialog.js}"></script>
+		<script type="text/javascript" th:src="@{/static/ui/pagination/pagination.js}"></script>
+		<script type="text/javascript" th:src="@{/static/ui/load/load.js}"></script>
+		<script type="text/javascript" th:src="@{/static/js/tool.js}"></script>
+		<script type="text/javascript" th:inline="javascript">
+            var baseUrl = [[${#servletContext.contextPath}]];
+		</script>
+	</th:block>
+
+	<div th:fragment="top" class="ui-head">
+		<div class="base-fl ui-head-left">
+			<span class="ui-logo"></span>
+		</div>
+		<div class="ui-head-right">
+			<span class="base-fr ui-head-text ui-out-icon">退出</span>
+			<span class="base-fr ui-head-text ui-set-icon">设置</span>
+			<span class="base-fr ui-head-text ui-head-icon">超级管理员</span>
+		</div>
+	</div>
+
+	<ul th:fragment="menu" class="ui-menu">
+		<li class="ui-menu-item">
+			<div class="js-menu-item ui-menu-item-title" rel="/user/userList">用户管理</div>
+		</li>
+		<li class="ui-menu-item">
+			<div class="js-menu-item ui-menu-item-title" rel="/project/projectList">项目管理</div>
+		</li>
+		<script type="text/javascript" th:inline="javascript">
+            $(".js-menu-item").click(function () {
+                var rel=$(this).attr("rel");
+                window.location.href=baseUrl+rel;
+            });
+		</script>
+	</ul>
+</div>
