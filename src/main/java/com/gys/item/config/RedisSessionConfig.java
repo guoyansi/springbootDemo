@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.session.Session;
 import org.springframework.session.SessionRepository;
 import org.springframework.session.data.redis.RedisOperationsSessionRepository;
+import org.springframework.session.data.redis.config.ConfigureRedisAction;
 import org.springframework.session.data.redis.config.annotation.web.http.RedisHttpSessionConfiguration;
 import org.springframework.session.web.http.SessionRepositoryFilter;
 
@@ -21,4 +22,14 @@ public class RedisSessionConfig extends RedisHttpSessionConfiguration {
         ((RedisOperationsSessionRepository)sessionRepository).setDefaultMaxInactiveInterval(sessionTimeOut);
         return super.springSessionRepositoryFilter(sessionRepository);
     }
+
+
+    /**
+     * springboot 关闭Spring-session中对CONFIG的操作
+     * @return
+     */
+   /* @Bean
+    public static ConfigureRedisAction configureRedisAction() {
+        return ConfigureRedisAction.NO_OP;
+    }*/
 }

@@ -12,10 +12,9 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.security.MessageDigest;
 import java.text.DecimalFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.List;
+import java.util.*;
 import java.util.regex.Pattern;
 
 public class MyTool {
@@ -360,5 +359,19 @@ public class MyTool {
         return  image;
     }*/
 
+    /**
+     * 格林威治时间获取Date
+     * @param s
+     * @return
+     * @throws ParseException
+     */
+    public Date getDateFromGeLinWeiZhi(String s) throws ParseException {
+        //String s = "Tue Jul 12 00:00:00 GMT+08:00 2016";
+        SimpleDateFormat sf1 = new SimpleDateFormat("EEE MMM dd hh:mm:ss z yyyy", Locale.ENGLISH);
+        Date date = sf1.parse(s);
+        /*SimpleDateFormat sf2 = new SimpleDateFormat("yyyy-MM-dd");
+        System.out.println(sf2.format(date));*/
+        return date;
+    }
 
 }
